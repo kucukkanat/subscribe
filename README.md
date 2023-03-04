@@ -1,4 +1,4 @@
-# HackDonald's Emitter
+# [Kucukkanat's Emitter](https://kucukkanat.github.io/subscribe/)
 
 ## Table of Contents
 
@@ -158,4 +158,4 @@ If don't, just open a [new clear and descriptive issue](../../issues/new).
 
 ## License
 
-[MIT License](https://opensource.org/licenses/MIT) © [Hackdonalds]()
+[MIT License](https://opensource.org/licenses/MIT) © [Kucukkanat](https://github.com/kucukkanat)

@@ -59,6 +59,12 @@ eventbus.off('foo', onFoo)  // unlisten
 
 // remove all listeners for specific event
 eventbus.off('foo')
+
+// Fire event listener only once
+eventbus.once('knock knock', (data) => console.log("I will be fired only once"))
+eventbus.emit('knock knock', null)
+// This will not fire
+eventbus.emit('knock knock', null)
 ```
 
 ## Typescript

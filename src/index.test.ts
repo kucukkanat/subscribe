@@ -57,4 +57,12 @@ describe('suite', () => {
 
     })
 
+    it("Emitter fires only once", async () => {
+        let called = 0
+        eventbus.once("login", () => { called++ })
+        eventbus.emit("login")
+        eventbus.emit("login")
+        expect(called).toBe(1)
+    })
+
 })

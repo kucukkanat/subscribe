@@ -37,6 +37,19 @@ export class Emitter<EventNames = string> {
     }
 
     /**
+     * Invoke this listener only once
+     * @param {string & EventNames} type  Type of event to emit, or `"*"` for all events
+     * @param {EventHandler} handler 
+     */
+    once(type: string & EventNames, handler: EventHandler) {
+        let _this = this
+        this.on(type, function g(...args: any) {
+            _this.off(type, g);
+            handler.apply(_this, args);
+        });
+    }
+
+    /**
      * Remove an event handler for the given type.
      *
      * @param  {String} type	Type of event to unregister `handler` from, or `"*"`
